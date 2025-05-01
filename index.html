@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Surgical Robot Transformer (SRT): Imitation Learning for Surgical Subtasks">
+  <meta name="keywords" content="Robotics, Manipulation, Medical Robotics">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Surgical Robot Transformer</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <link rel="icon" href="todo">
+
+  <meta property="og:site_name" content="Surgical Robot Transformer (SRT): Imitation Learning for Surgical Subtasks" />
+  <meta property="og:type" content="video.other" />
+  <meta property="og:title" content="Surgical Robot Transformer (SRT): Imitation Learning for Surgical Subtasks" />
+  <meta property="og:description" content="by anonymous" />
+  <meta property="og:url" content="todo" />
+  <meta property="og:image" content="todo" />
+  <meta property="og:image:secure" content="todo" />
+  <meta property="og:video" content="" />
+  <meta property="og:video:secure" content="" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="720" />
+
+  <meta property="article:publisher" content="todo" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Surgical Robot Transformer (SRT): Imitation Learning for Surgical Subtasks" />
+  <meta name="twitter:description" content="by anonymous" />
+  <meta name="twitter:url" content="todo" />
+  <meta name="twitter:image" content="todo" />
+  <meta name="twitter:site" content="todo" />
+  <meta name="twitter:card" content="player" />
+  <meta name="twitter:player" content="" />
+  <meta name="twitter:player:width" content="1280" />
+  <meta name="twitter:player:height" content="720" />
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+
+
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-two-thirds is-centered has-text-centered">
+          <h1 class="title is-1 publication-title">Surgical Robot Transformer (SRT)</h1>
+          <h2 class="subtitle is-2 publication-subtitle">Imitation Learning for Surgical Subtasks</h2>
+        </div>
+      </div>
+      <div class="columns is-centered">
+          <div class="column is-two-thirds has-text-centered">
+            <video controls autoplay loop muted playsinline style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;">
+              <source src="./resources/tasks/teaser.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+  
+
+<section class="section">
+  <div class="container">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We explore whether surgical manipulation tasks can be learned on the da Vinci robot via imitation learning.
+            However, the da Vinci system presents unique challenges which hinder straight-forward implementation of imitation learning. 
+            Notably, its forward kinematics is inconsistent due to imprecise joint measurements, and naively training a policy
+             using such approximate kinematics data often leads to task failure. To overcome this limitation, we introduce 
+             a relative action formulation which enables successful policy training and deployment using its approximate 
+             kinematics data. A promising outcome of this approach is that the large repository of clinical data, which 
+             contains approximate kinematics, may be directly utilized for robot learning without further corrections. 
+             We demonstrate our findings through successful execution of three fundamental surgical tasks, including tissue manipulation, 
+             needle handling, and knot-tying.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Autonomous Tasks</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <div class="content has-text-justified">
+          <p>
+            The videos below show results for the policy trained using the hybrid-relative action representation, unless otherwise noted.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/tasks/davinci_manipulation_v2_m1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/tasks/davinci_manipulation_v2_m2.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/tasks/davinci_manipulation_v2_m3.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Zero-Shot Generalization</h2>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/tasks/davinci_manipulation_v2_m6.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/tasks/davinci_manipulation_v2_m13.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Retry Behavior</h2>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/tasks/davinci_manipulation_v2_m4.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/tasks/davinci_manipulation_v2_m5.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Repeatability Tests</h2>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/tasks/davinci_manipulation_v2_m10.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/tasks/davinci_manipulation_v2_m11.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/tasks/davinci_manipulation_v2_m12.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Baseline Results</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <div class="content has-text-justified">
+          <p>
+            The videos below show results for policy trained using the camera-centric action representation, which is the baseline approach. 
+            The camera-centric action representation models policy actions as absolute end-effector poses with respect to the endoscope tip.
+            In other words, the policy is trained to move the end-effectors to absolute waypoints in the workspace. However, due to errors in the forward kinematics 
+            of the da Vinci arms, which change whenever the set-up joints are repositioned, the absolute waypoints are no longer the same locations 
+            the model encountered durining training. This issue leads to task failures across all tasks. All videos are 2X speed.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/tasks/ACT_knot_tying_camera_centric_issues_2x.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/tasks/ACT_needle_pickup_camera_centric_issues_2x.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/tasks/ACT_lift_tissue_camera_centric_issues.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Overview</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <div class="content has-text-justified">
+          <p>
+            We explore whether surgical manipulation tasks can be learned on the da Vinci Research Kit (dVRK) system via imitation learning.
+            We consider three tasks for automation, including lifting tissue, needle pickup and handover, and suture knot-tying, as shown below. We also
+            explore the use of wrist cameras and evaluate their impact on performance.
+          </p>
+          <!-- Example of how to insert an image -->
+          <img src="resources/imgs/intro_fig.jpg" alt="Descriptive text about the image" style="max-width: 100%; height: auto;">
+          <!-- You can add more <img> tags as needed -->
+        </div>
+
+        <div class="content has-text-justified">
+          <p>
+            However, robot learning on the da Vinci presents unique challenges. The hardware suffers from inaccurate forward kinematics due 
+            to potentiometer-based joint measurements, hysteresis, and overall flexibility and slack in its mechanism. 
+            These limitations result in the robot's failure to perform simple visual-servoing tasks 
+            (see <a href="https://sites.google.com/berkeley.edu/surgical-calibration">[1]</a> 
+            , <a href="https://arxiv.org/abs/2210.13598">[2]</a>). As we discover in this work, 
+            naively training a policy using such approximate kinematic data almost always leads to task failure. For instance, a policy 
+            trained to output absolute end-effector poses, which is a common approach to train robot policies, achieves near-zero success 
+            rates across all tasks. 
+          </p>
+        </div>
+        
+        <!-- <div class="content has-text-justified">
+          <p>
+            More concretely, as shown below, each arm is a sequential combination of set-up joints which are passive, 
+            followed by active joints which are motorized. The passive joints are notoriously inaccurate due to using only potentiometers for joint
+            measurements. The active joints use both potentiometers and motor encoders, providing improved precision. However, in general, 
+            the use of potentiometers throughout all the joints causes the forward kinematics of the arms to be inaccurate, even up to 5cm error.
+          
+            Over the years, Intuitive has improved their design by adding better encoders to the set-up joints as well. However, the improvement
+            only affects the da Vinci Xi generation, while the past genertions, including da Vinci classic, S, and Si, remain affected.  
+          </p>
+          <img src="resources/imgs/robot_fig_v16.jpg" alt="Descriptive text about the image" style="max-width: 100%; height: auto;">
+        </div> -->
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Approach</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <div class="content has-text-justified">
+          <p>
+          We find that the relative motion of the da Vinci system is much more consistent than its absolute forward kinematics.
+          We thus model policy actions as relative motion, and further explore its variants to design the most effective action
+          representation for the da Vinci. We consider three options as shown below: camera-centric, tool-centric, and hybrid-relative actions.
+          The camera-centric action representation is a baseline approach which models actions as absolute poses of the end-effectors with respect
+          to the endoscope tip. 
+          The other two are relative formulations defining actions with respect to the current tool (i.e. end-effector) frame or the endoscope tip frame.
+          </p>
+          <!-- Example of how to insert an image -->
+          <img src="resources/imgs/action_rep.jpg" alt="Descriptive text about the image" style="max-width: 100%; height: auto;">
+          <!-- You can add more <img> tags as needed -->
+        </div>
+
+        <div class="content has-text-justified">
+          <p>
+            We then train a policy using images as input and the above action representations. We do not use
+            kinematics data as input as done in many prior works, since the kinematics data of the da Vinci can be unreliable.
+            We base our model on <a href="https://github.com/tonyzhaozh/act">ACT</a>, a transformer-based architecture.
+
+          </p>
+          <!-- Example of how to insert an image -->
+          <img src="resources/imgs/policy_fig.jpg" alt="Descriptive text about the image" style="max-width: 100%; height: auto;">
+          <!-- You can add more <img> tags as needed -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Results</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+
+        <div class="content has-text-justified">
+          <p>
+          We first evaluate whether relative motion on the da Vinci is more consistent than its absolute forward kinematics.
+          This is evaluated by repeating a recorded reference trajectory using absolute vs relative action formulation under various robot configurations.
+          Overall, our experiments show that in the presence of joint measurement errors, relative motion is more consistent. 
+          Therefore, modeling policy actions as relative motion is a better choice. More experiment details and results can be found in the below
+          figure and table.
+          </p>
+          <!-- Example of how to insert an image -->
+          <img src="resources/imgs/repeatability_fig_captions.JPG" alt="Descriptive text about the image" style="max-width: 100%; height: auto; margin-bottom: 20px;">
+          <img src="resources/imgs/table_repeatability.JPG" alt="Descriptive text about the image" style="max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+          <!-- You can add more <img> tags as needed -->
+        </div>
+
+        <div class="content has-text-justified">
+          <p>
+          We also evaluate the task success rates of our models trained using the various action representations. 
+          Our results show that policies trained using relative action formulations perform well (tool-centric and hybrid-relative action representations),
+          while policies trained using absolute forward kinematics fail. The successful policy rollouts by the hybrid-relative action formulation is shown 
+          in the series of videos above. We also observe that wrist cameras can provide significant performance gains in learning surgical manipulation 
+          tasks.
+          </p>
+          <!-- Example of how to insert an image -->
+          <img src="resources/imgs/table_results.JPG" alt="Descriptive text about the image" style="max-width: 100%; height: auto;">
+          <!-- You can add more <img> tags as needed -->
+        </div>
+
+        <div class="content has-text-justified">
+          <p>
+            The videos below show the results for policy trained using the absolute forward kinematics of the arms (camera-centric actions), which is the baseline approach.
+            Due to the errors in the da Vinci arm foward kinematics, which can change significantly between training and inference,
+            the policies fail to complete the tasks. All videos are 2X speed.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/tasks/ACT_knot_tying_camera_centric_issues_2x.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/tasks/ACT_needle_pickup_camera_centric_issues_2x.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/tasks/ACT_lift_tissue_camera_centric_issues.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</body>
+</html>
