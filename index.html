@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Surgical Robot Transformer (SRT): Imitation Learning for Surgical Subtasks">
-  <meta name="keywords" content="Robotics, Manipulation, Medical Robotics">
+  <meta name="description" content="Endovascular Soft Robot Transformer (EndoSRT): Imitation Learning for Autonomous Endovascular Surgery">
+  <meta name="keywords" content="Robotics, Imitation Learning, Endovascular Surgery, Medical Robotics">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Surgical Robot Transformer</title>
+  <title>Endovascular SRT</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -26,9 +26,9 @@
 
   <link rel="icon" href="todo">
 
-  <meta property="og:site_name" content="Surgical Robot Transformer (SRT): Imitation Learning for Surgical Subtasks" />
+  <meta property="og:site_name" content="Endovascular Soft Robot Transformer (EndoSRT): Imitation Learning for Autonomous Endovascular Surgery" />
   <meta property="og:type" content="video.other" />
-  <meta property="og:title" content="Surgical Robot Transformer (SRT): Imitation Learning for Surgical Subtasks" />
+  <meta property="og:title" content="Endovascular Soft Robot Transformer (EndoSRT): Imitation Learning for Autonomous Endovascular Surgery" />
   <meta property="og:description" content="by anonymous" />
   <meta property="og:url" content="todo" />
   <meta property="og:image" content="todo" />
@@ -40,7 +40,7 @@
 
   <meta property="article:publisher" content="todo" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Surgical Robot Transformer (SRT): Imitation Learning for Surgical Subtasks" />
+  <meta name="twitter:title" content="Endovascular Soft Robot Transformer (EndoSRT): Imitation Learning for Autonomous Endovascular Surgery" />
   <meta name="twitter:description" content="by anonymous" />
   <meta name="twitter:url" content="todo" />
   <meta name="twitter:image" content="todo" />
@@ -61,18 +61,18 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-two-thirds is-centered has-text-centered">
-          <h1 class="title is-1 publication-title">Surgical Robot Transformer (SRT)</h1>
-          <h2 class="subtitle is-2 publication-subtitle">Imitation Learning for Surgical Subtasks</h2>
+          <h1 class="title is-1 publication-title">Endovascular Soft Robot Transformer (EndoSRT)</h1>
+          <h2 class="subtitle is-2 publication-subtitle">Imitation Learning for Autonomous Endovascular Surgery</h2>
         </div>
       </div>
-      <div class="columns is-centered">
+      <!-- <div class="columns is-centered">
           <div class="column is-two-thirds has-text-centered">
             <video controls autoplay loop muted playsinline style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;">
               <source src="./resources/tasks/teaser.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
-        </div>
+        </div> -->
     </div>
   </div>
 </section>
@@ -87,15 +87,22 @@
         <h2 class="title is-2">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We explore whether surgical manipulation tasks can be learned on the da Vinci robot via imitation learning.
-            However, the da Vinci system presents unique challenges which hinder straight-forward implementation of imitation learning. 
-            Notably, its forward kinematics is inconsistent due to imprecise joint measurements, and naively training a policy
-             using such approximate kinematics data often leads to task failure. To overcome this limitation, we introduce 
-             a relative action formulation which enables successful policy training and deployment using its approximate 
-             kinematics data. A promising outcome of this approach is that the large repository of clinical data, which 
-             contains approximate kinematics, may be directly utilized for robot learning without further corrections. 
-             We demonstrate our findings through successful execution of three fundamental surgical tasks, including tissue manipulation, 
-             needle handling, and knot-tying.
+            In endovascular surgery, surgeons push a thin tube called a catheter guided by a
+             thin wire to a treatment site inside the patient's blood vessels to treat various 
+             conditions such as blood clots, aneurysms, and malformations. Guidewires with robotic 
+             tips can enhance maneuverability, but they present challenges in modeling and control. 
+             Automation of soft robotic guidewire navigation has the potential to overcome these 
+             challenges, increasing the precision and safety of endovascular navigation. In other 
+             surgical domains, end-to-end imitation learning has shown promising results. Thus, we 
+             develop the Endovascular Soft Robot Transformer (EndoSRT), a transformer-based imitation 
+             learning framework with goal conditioning, relative action outputs, and automatic 
+             contrast dye injections to enable generalizable soft robotic guidewire navigation in a 
+             simplified neurovascular aneurysm targeting task. We train the model on 36 different 
+             modular bifurcated geometries, generating 647 total demonstrations under simulated 
+             fluoroscopy, and evaluate it on three previously unseen vascular geometries. The model 
+             can autonomously drive the tip of the robot to the aneurysm location with a success rate 
+             of 83\% on the unseen geometries. In addition, we present ablation studies to evaluate 
+             the effectiveness of each design and data collection choice.
           </p>
         </div>
       </div>
@@ -103,7 +110,7 @@
   </div>
 </section>
 
-<section class="section">
+<!-- <section class="section">
   <div class="container">
     <h2 class="title is-2" style="text-align: center;">Autonomous Tasks</h2>
     <div class="columns is-centered has-text-centered">
@@ -185,7 +192,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- <section class="section">
   <div class="container">
@@ -221,7 +228,7 @@
   </div>
 </section> -->
 
-<section class="section">
+<!-- <section class="section">
   <div class="container">
     <h2 class="title is-2" style="text-align: center;">Overview</h2>
     <div class="columns is-centered has-text-centered">
@@ -231,11 +238,11 @@
             We explore whether surgical manipulation tasks can be learned on the da Vinci Research Kit (dVRK) system via imitation learning.
             We consider three tasks for automation, including lifting tissue, needle pickup and handover, and suture knot-tying, as shown below. We also
             explore the use of wrist cameras and evaluate their impact on performance.
-          </p>
+          </p> -->
           <!-- Example of how to insert an image -->
-          <img src="resources/imgs/intro_fig.jpg" alt="Descriptive text about the image" style="max-width: 100%; height: auto;">
+          <!-- <img src="resources/imgs/intro_fig.jpg" alt="Descriptive text about the image" style="max-width: 100%; height: auto;"> -->
           <!-- You can add more <img> tags as needed -->
-        </div>
+        <!-- </div>
 
         <div class="content has-text-justified">
           <p>
@@ -248,7 +255,7 @@
             trained to output absolute end-effector poses, which is a common approach to train robot policies, achieves near-zero success 
             rates across all tasks. 
           </p>
-        </div>
+        </div> -->
         
         <!-- <div class="content has-text-justified">
           <p>
@@ -263,7 +270,7 @@
           <img src="resources/imgs/robot_fig_v16.jpg" alt="Descriptive text about the image" style="max-width: 100%; height: auto;">
         </div> -->
         
-      </div>
+      <!-- </div>
     </div>
   </div>
 </section>
@@ -281,11 +288,11 @@
           The camera-centric action representation is a baseline approach which models actions as absolute poses of the end-effectors with respect
           to the endoscope tip. 
           The other two are relative formulations defining actions with respect to the current tool (i.e. end-effector) frame or the endoscope tip frame.
-          </p>
+          </p> -->
           <!-- Example of how to insert an image -->
-          <img src="resources/imgs/action_rep.jpg" alt="Descriptive text about the image" style="max-width: 100%; height: auto;">
+          <!-- <img src="resources/imgs/action_rep.jpg" alt="Descriptive text about the image" style="max-width: 100%; height: auto;"> -->
           <!-- You can add more <img> tags as needed -->
-        </div>
+        <!-- </div>
 
         <div class="content has-text-justified">
           <p>
@@ -293,11 +300,11 @@
             kinematics data as input as done in many prior works, since the kinematics data of the da Vinci can be unreliable.
             We base our model on <a href="https://github.com/tonyzhaozh/act">ACT</a>, a transformer-based architecture.
 
-          </p>
+          </p> -->
           <!-- Example of how to insert an image -->
-          <img src="resources/imgs/policy_fig.jpg" alt="Descriptive text about the image" style="max-width: 100%; height: auto;">
+          <!-- <img src="resources/imgs/policy_fig.jpg" alt="Descriptive text about the image" style="max-width: 100%; height: auto;"> -->
           <!-- You can add more <img> tags as needed -->
-        </div>
+        <!-- </div>
       </div>
     </div>
   </div>
@@ -316,12 +323,12 @@
           Overall, our experiments show that in the presence of joint measurement errors, relative motion is more consistent. 
           Therefore, modeling policy actions as relative motion is a better choice. More experiment details and results can be found in the below
           figure and table.
-          </p>
+          </p> -->
           <!-- Example of how to insert an image -->
-          <img src="resources/imgs/repeatability_fig_captions.JPG" alt="Descriptive text about the image" style="max-width: 100%; height: auto; margin-bottom: 20px;">
-          <img src="resources/imgs/table_repeatability.JPG" alt="Descriptive text about the image" style="max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+          <!-- <img src="resources/imgs/repeatability_fig_captions.JPG" alt="Descriptive text about the image" style="max-width: 100%; height: auto; margin-bottom: 20px;">
+          <img src="resources/imgs/table_repeatability.JPG" alt="Descriptive text about the image" style="max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;"> -->
           <!-- You can add more <img> tags as needed -->
-        </div>
+        <!-- </div>
 
         <div class="content has-text-justified">
           <p>
@@ -330,11 +337,11 @@
           while policies trained using absolute forward kinematics fail. The successful policy rollouts by the hybrid-relative action formulation is shown 
           in the series of videos above. We also observe that wrist cameras can provide significant performance gains in learning surgical manipulation 
           tasks.
-          </p>
+          </p> -->
           <!-- Example of how to insert an image -->
-          <img src="resources/imgs/table_results.JPG" alt="Descriptive text about the image" style="max-width: 100%; height: auto;">
+          <!-- <img src="resources/imgs/table_results.JPG" alt="Descriptive text about the image" style="max-width: 100%; height: auto;"> -->
           <!-- You can add more <img> tags as needed -->
-        </div>
+        <!-- </div>
 
         <div class="content has-text-justified">
           <p>
@@ -361,7 +368,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 </body>
