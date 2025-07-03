@@ -373,6 +373,49 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Baseline models</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+
+        <div class="content has-text-justified">
+          <p>
+            We also attempted several alternative models, to verify that our transformer architecture is the correct choice. The
+            videos below illustrate common failure modes of these alternative policies. 
+          </p>
+          <p>
+            Firstly, we compared our result with a state-of-the-art Diffusion policy <a href="https://arxiv.org/abs/2303.04137">[6]</a>. This policy
+            achieves only a 22% success rate on the novel geometries. This result is in agreement with the prior art 
+            <a href="https://surgical-robot-transformer.github.io/">[4]</a>. The policy struggles with navigating the initial bifurcation and fails to
+            recover.
+          </p>
+          <p>
+            Secondly, we tested how successful a simpler, lighter-weight model can be in this task. We implemented a CNN-MLP, however
+            failed to achieve any successful trials. It is observed that this model can advance to the bifurcation, but then stalls and is 
+            not able to execute any meaningful action sequence.
+          </p>
+          <p>
+            Finally, we illustrate in which cases classical controllers may fail. While they largely rely on accurate
+            reconstruction of the guidewire inside the vessels, this is difficult to obtain. If this information was provided, however,
+            it is still nontrivial to determine an appropriate control law, since the wire is severely under-actuated. As an example, we implemented a 
+            centerline-following algorithm. This approach executes a breadth-first-search along the vessel centerline to plan the path, and PID
+            controller that uses a Jacobian obtained through a Broyden update, similar to <a href="https://ieeexplore.ieee.org/document/6776556">[7]</a>. 
+            At the bifurcation, although the robot intends to follow the centerline, a bending
+            motion away from the centerline is required to advance. This instruction is not encoded in a simple centerline-following algorithm 
+            and underlying PID controller.
+          </p>
+          <p>
+            <video controls autoplay loop muted playsinline src="./resources/tasks/diffusion_baseline.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+            <video controls autoplay loop muted playsinline src="./resources/tasks/cnnmlp_baseline.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+            <video controls autoplay loop muted playsinline src="./resources/tasks/centerline_baseline.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 </body>
 </html>
