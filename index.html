@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Endovascular Soft Robot Transformer (EndoSRT): Imitation Learning for Autonomous Endovascular Surgery">
+  <meta name="description" content="Autonomous Soft Robotic Guidewire Navigation via Imitation Learning">
   <meta name="keywords" content="Robotics, Imitation Learning, Endovascular Surgery, Medical Robotics">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Endovascular SRT</title>
+  <title>Soft Robot Guidewire Navigation</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -26,9 +26,9 @@
 
   <link rel="icon" href="todo">
 
-  <meta property="og:site_name" content="Endovascular Soft Robot Transformer (EndoSRT): Imitation Learning for Autonomous Endovascular Surgery" />
+  <meta property="og:site_name" content="Autonomous Soft Robotic Guidewire Navigation via Imitation Learning" />
   <meta property="og:type" content="video.other" />
-  <meta property="og:title" content="Endovascular Soft Robot Transformer (EndoSRT): Imitation Learning for Autonomous Endovascular Surgery" />
+  <meta property="og:title" content="Autonomous Soft Robotic Guidewire Navigation via Imitation Learning" />
   <meta property="og:description" content="by anonymous" />
   <meta property="og:url" content="todo" />
   <meta property="og:image" content="todo" />
@@ -40,7 +40,7 @@
 
   <meta property="article:publisher" content="todo" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Endovascular Soft Robot Transformer (EndoSRT): Imitation Learning for Autonomous Endovascular Surgery" />
+  <meta name="twitter:title" content="Autonomous Soft Robotic Guidewire Navigation via Imitation Learning" />
   <meta name="twitter:description" content="by anonymous" />
   <meta name="twitter:url" content="todo" />
   <meta name="twitter:image" content="todo" />
@@ -61,14 +61,13 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-two-thirds is-centered has-text-centered">
-          <h1 class="title is-1 publication-title">Endovascular Soft Robot Transformer (EndoSRT)</h1>
-          <h2 class="subtitle is-2 publication-subtitle">Imitation Learning for Autonomous Endovascular Surgery</h2>
+          <h1 class="title is-1 publication-title">Autonomous Soft Robotic Guidewire Navigation via Imitation Learning</h1>
         </div>
       </div>
       <div class="columns is-centered">
           <div class="column is-two-thirds has-text-centered">
             <video controls autoplay loop muted playsinline style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;">
-              <source src="./resources/tasks/teaser_endosrt.mp4" type="video/mp4">
+              <source src="./resources/tasks/teaser_ours.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
@@ -76,8 +75,6 @@
     </div>
   </div>
 </section>
-
-  
 
 <section class="section">
   <div class="container">
@@ -87,22 +84,28 @@
         <h2 class="title is-2">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In endovascular surgery, surgeons push a thin tube called a catheter guided by a
-             thin wire to a treatment site inside the patient's blood vessels to treat various 
-             conditions such as blood clots, aneurysms, and malformations. Guidewires with robotic 
-             tips can enhance maneuverability, but they present challenges in modeling and control. 
-             Automation of soft robotic guidewire navigation has the potential to overcome these 
-             challenges, increasing the precision and safety of endovascular navigation. In other 
-             surgical domains, end-to-end imitation learning has shown promising results. Thus, we 
-             develop the Endovascular Soft Robot Transformer (EndoSRT), a transformer-based imitation 
-             learning framework with goal conditioning, relative action outputs, and automatic 
-             contrast dye injections to enable generalizable soft robotic guidewire navigation in a 
-             simplified neurovascular aneurysm targeting task. We train the model on 36 different 
-             modular bifurcated geometries, generating 647 total demonstrations under simulated 
-             fluoroscopy, and evaluate it on three previously unseen vascular geometries. The model 
-             can autonomously drive the tip of the robot to the aneurysm location with a success rate 
-             of 83% on the unseen geometries. In addition, we present ablation studies to evaluate 
-             the effectiveness of each design and data collection choice.
+            In endovascular surgery, interventional radiologists
+            push a thin tube called a catheter, guided by a thin wire to a
+            treatment site inside the patient’s blood vessels to treat various
+            conditions such as blood clots, aneurysms, and malformations.
+            Guidewires with robotic tips can enhance maneuverability, but
+            they present challenges in modeling and control. Automation
+            of soft robotic guidewire navigation has the potential to over-
+            come these challenges, increasing the precision and safety of
+            endovascular navigation. In other surgical domains, end-to-end
+            imitation learning has shown promising results. Thus, we develop
+            a transformer-based imitation learning framework with goal
+            conditioning, relative action outputs, and automatic contrast
+            dye injections to enable generalizable soft robotic guidewire
+            navigation in an aneurysm targeting task. We train the model
+            on 36 different modular bifurcated geometries, generating 647
+            total demonstrations under simulated fluoroscopy, and evaluate
+            it on three previously unseen vascular geometries. The model
+            can autonomously drive the tip of the robot to the aneurysm
+            location with a success rate of 83% on the unseen geometries,
+            outperforming several baselines. In addition, we present ablation
+            and baseline studies to evaluate the effectiveness of each design
+            and data collection choice.
           </p>
         </div>
       </div>
@@ -124,32 +127,32 @@
     </div>
     <div class="columns is-centered">
       <div class="column is-three-fifths is-centered has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/tasks/endosrt_2left.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+        <video controls autoplay loop muted playsinline src="./resources/tasks/ours_2left.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
       </div>
     </div>
     <div class="columns is-centered">
       <div class="column is-three-fifths is-centered has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/tasks/endosrt_2right.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+        <video controls autoplay loop muted playsinline src="./resources/tasks/ours_2right.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
       </div>
     </div>
     <div class="columns is-centered">
       <div class="column is-three-fifths is-centered has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/tasks/endosrt_5left.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+        <video controls autoplay loop muted playsinline src="./resources/tasks/ours_5left.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
       </div>
     </div>
     <div class="columns is-centered">
       <div class="column is-three-fifths is-centered has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/tasks/endosrt_5right.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+        <video controls autoplay loop muted playsinline src="./resources/tasks/ours_5right.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
       </div>
     </div>
     <div class="columns is-centered">
       <div class="column is-three-fifths is-centered has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/tasks/endosrt_10left.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+        <video controls autoplay loop muted playsinline src="./resources/tasks/ours_10left.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
       </div>
     </div>
     <div class="columns is-centered">
       <div class="column is-three-fifths is-centered has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/tasks/endosrt_10right.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+        <video controls autoplay loop muted playsinline src="./resources/tasks/ours_10right.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
       </div>
     </div>
   </div>
@@ -160,12 +163,12 @@
     <h2 class="title is-2" style="text-align: center;">Recovery Behavior</h2>
     <div class="columns is-centered">
       <div class="column is-three-fifths is-centered has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/tasks/endosrt_gen_retract_1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+        <video controls autoplay loop muted playsinline src="./resources/tasks/ours_gen_retract_1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
       </div>
     </div>
     <div class="columns is-centered">
       <div class="column is-three-fifths is-centered has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/tasks/endosrt_gen_recov_2.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+        <video controls autoplay loop muted playsinline src="./resources/tasks/ours_gen_recov_2.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
       </div>
     </div>
     <div class="columns is-centered has-text-centered">
@@ -179,12 +182,12 @@
     </div>
     <div class="columns is-centered">
       <div class="column is-three-fifths is-centered has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/tasks/endosrt_gen_wrongbranch_3.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+        <video controls autoplay loop muted playsinline src="./resources/tasks/ours_gen_wrongbranch_3.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
       </div>
     </div>
     <div class="columns is-centered">
       <div class="column is-three-fifths is-centered has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/tasks/endosrt_gen_wrongbranch_4.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+        <video controls autoplay loop muted playsinline src="./resources/tasks/ours_gen_wrongbranch_4.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
       </div>
     </div>
   </div>
@@ -206,48 +209,12 @@
     </div>
     <div class="columns is-centered">
       <div class="column is-three-fifths is-centered has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/tasks/endosrt_gen_overlay_5.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+        <video controls autoplay loop muted playsinline src="./resources/tasks/ours_gen_overlay_5.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
       </div>
     </div>
     <div class="columns is-centered">
       <div class="column is-three-fifths is-centered has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/tasks/endosrt_gen_overlay_6.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2 class="title is-2" style="text-align: center;">Failures on Ablative Models</h2>
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-two-thirds">
-        <div class="content has-text-justified">
-          <p>
-            We conducted ablation studies to investigate the effect of the four key features of our imitation learning framework and their effects on overall performance: usage of recovery data, contrast injection prediction, choice of goal representation, and choice of action representation.
-            Below shows representative failure modes for the policies trained with 50% recovery data, constant contrast injections, a binary goal representation, and absolute actions.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-three-fifths is-centered has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/tasks/recovery_ablation_2.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-      </div>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-three-fifths is-centered has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/tasks/constcontrast_ablation_1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-      </div>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-three-fifths is-centered has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/tasks/binary_ablation_4.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-      </div>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-three-fifths is-centered has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/tasks/absact_ablation_3.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+        <video controls autoplay loop muted playsinline src="./resources/tasks/ours_gen_overlay_6.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
       </div>
     </div>
   </div>
@@ -304,8 +271,7 @@
       <div class="column is-two-thirds">
         <div class="content has-text-justified">
           <p>
-            We use a transformer-based action chunking model for endovascular navigation, called the Endovascular 
-            Soft Robot Transformer (EndoSRT), inspired by the Surgical Robot Transformer (SRT) <a href="https://surgical-robot-transformer.github.io/">[4]</a> 
+            We use a transformer-based action chunking model for soft robotic guidewire navigation, inspired by the Surgical Robot Transformer (SRT) <a href="https://surgical-robot-transformer.github.io/">[4]</a> 
             which applies <a href="https://tonyzhaozh.github.io/aloha/Action-Chunking Transformers">[5]</a> to surgical tasks with the da Vinci robot. 
           </p>
           <img src="resources/imgs/algopic_color.png" alt="Descriptive text about the image" style="max-width: 100%; height: auto;">
@@ -358,7 +324,14 @@
             Finally, we trained a model that outputs the motor actions as absolute positions ("Absolute actions"), rather than relative to the 
             motors' current positions.
           </p>
-          <img src="resources/imgs/table_success.png" alt="Descriptive text about the image" style="display: block; max-width: 100%; height: auto; margin: 0 auto; padding: 0;">
+          <p>
+            We also evaluated several baselines as a comparison to our proposed model: a state-of-the-art Diffusion policy <a href="https://arxiv.org/abs/2303.04137">[6]</a>,
+             a vanilla multi-layer perceptron (MLP), a classical centerline-following controller, and two clinicians trained in neurointerventional radiology. 
+             The Diffusion and MLP policies use the same inputs (live and goal images passed through Resnet encoders) and outputs (action chunk and contrast
+              prediction) as our proposed model. We evaluated all these policies on the novel geometries test set.
+          </p>
+          <img src="resources/imgs/tabsuccess.png" alt="Descriptive text about the image" style="display: block; max-width: 100%; height: auto; margin: 0 auto; padding: 0;">
+
         </div>
 
         <div class="content has-text-justified">
@@ -366,8 +339,44 @@
           To provide a more continuous measure of the performance of each model, we present the distance between the robot's tip and the goal aneurysm's 
           boundary at the end of the trial -- indicating how close the model is to succeeding.
           </p>
-          <img src="resources/imgs/targetdist_ablations.png" alt="Descriptive text about the image" style="display: block; max-width: 100%; height: auto; margin: 0 auto; padding: 0;">
+          <img src="resources/imgs/finaldist.png" alt="Descriptive text about the image" style="display: block; max-width: 100%; height: auto; margin: 0 auto; padding: 0;">
+         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Failures on Ablative Models</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <div class="content has-text-justified">
+          <p>
+            Below shows representative failure modes for the policies trained with 50% recovery data, constant contrast injections, a binary goal representation, and absolute actions.
+          </p>
         </div>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/tasks/recovery_ablation_2.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/tasks/constcontrast_ablation_1.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/tasks/binary_ablation_4.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/tasks/absact_ablation_3.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
       </div>
     </div>
   </div>
@@ -375,39 +384,17 @@
 
 <section class="section">
   <div class="container">
-    <h2 class="title is-2" style="text-align: center;">Baseline models</h2>
+    <h2 class="title is-2" style="text-align: center;">Failures of Baseline models</h2>
     <div class="columns is-centered has-text-centered">
       <div class="column is-two-thirds">
 
         <div class="content has-text-justified">
           <p>
-            We also attempted several alternative models, to verify that our transformer architecture is the correct choice. The
-            videos below illustrate common failure modes of these alternative policies. 
+            The following videos illustrate common failure modes of the baseline policies. 
           </p>
           <p>
-            Firstly, we compared our result with a state-of-the-art Diffusion policy <a href="https://arxiv.org/abs/2303.04137">[6]</a>. This policy
-            achieves only a 22% success rate on the novel geometries. This result is in agreement with the prior art 
-            <a href="https://surgical-robot-transformer.github.io/">[4]</a>. The policy struggles with navigating the initial bifurcation and fails to
-            recover.
-          </p>
-          <p>
-            Secondly, we tested how successful a simpler, lighter-weight model can be in this task. We implemented a CNN-MLP, however
-            failed to achieve any successful trials. It is observed that this model can advance to the bifurcation, but then stalls and is 
-            not able to execute any meaningful action sequence.
-          </p>
-          <p>
-            Finally, we illustrate in which cases classical controllers may fail. While they largely rely on accurate
-            reconstruction of the guidewire inside the vessels, this is difficult to obtain. If this information was provided, however,
-            it is still nontrivial to determine an appropriate control law, since the wire is severely under-actuated. As an example, we implemented a 
-            centerline-following algorithm. This approach executes a breadth-first-search along the vessel centerline to plan the path, and PID
-            controller that uses a Jacobian obtained through a Broyden update, similar to <a href="https://ieeexplore.ieee.org/document/6776556">[7]</a>. 
-            At the bifurcation, although the robot intends to follow the centerline, a bending
-            motion away from the centerline is required to advance. This instruction is not encoded in a simple centerline-following algorithm 
-            and underlying PID controller.
-          </p>
-          <p>
-            <video controls autoplay loop muted playsinline src="./resources/tasks/diffusion_baseline.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-            <video controls autoplay loop muted playsinline src="./resources/tasks/cnnmlp_baseline.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+            <video controls autoplay loop muted playsinline src="./resources/tasks/diffusion_baseline_buckle.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+            <video controls autoplay loop muted playsinline src="./resources/tasks/mlp_baseline.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
             <video controls autoplay loop muted playsinline src="./resources/tasks/centerline_baseline.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
           </p>
         </div>
