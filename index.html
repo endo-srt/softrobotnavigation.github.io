@@ -228,9 +228,13 @@
         <div class="content has-text-justified">
           <p>
             We perform a bench-top experiment investigating the feasibility of autonomous navigation of a soft fluidic robot for 
-            intracranial aneurysm treatment. Here, we simplify the task to a two-dimensional environment and larger-scale robot than 
-            necessary for neurovascular intervention. However, we use 3D-printed modular vessels that incorporate high geometrical variation 
-            to mimic the difficulty of the real task.
+            intracranial aneurysm treatment. As a preliminary step towards achieving autonomous navigation, we conduct our study 
+            using a large-scale robot. In addition, we isolate our focus to a single bifurcation projected to a 2D plane. In a 
+            real case, navigation can be reduced to traversing a single bifurcation at a time, which often lies roughly in a plane 
+            after appropriate C-arm positioning. In this work, we preserve several core 
+            difficulties of endovascular intervention: unpredictable vessel-tool forces via a soft robotic steerable guidewire 
+            attached to a flexible tube; high geometrical variation via modular 3D-printed vessel mazes; and ambiguous and
+            incomplete visual feedback via a fluoroscopy simulator.
           </p>
           <img src="resources/imgs/introfig.png" alt="Descriptive text about the image" style="max-width: 100%; height: auto;">
         </div>
@@ -299,7 +303,8 @@
             To evaluate our model, we designed two sets of geometries that were not in the training set; (1) three rearranged 
             geometries, which were mazes that contain branches that appeared in the training set, but now in a unique combination, 
             and (2) three novel geometries, which were mazes with branches and bifurcations not seen at all in the training set. We
-            evaluated the policy on several ablative models described below and also had two trained clinicians perform the task.
+            evaluated the policy on several ablative models described below and also had two trained clinicians perform the task. We measured
+            the success rate in reaching the aneurysm and the final distances to the aneurysm boundary at the end of each trial.
           </p>
           <p>
             To investigate the effect of including recovery data, we trained two ablation models: one trained on 218 normal 
@@ -324,23 +329,15 @@
             Finally, we trained a model that outputs the motor actions as absolute positions ("Absolute actions"), rather than relative to the 
             motors' current positions.
           </p>
+          <img src="resources/imgs/ablation_result.png" alt="Descriptive text about the image" style="display: block; max-width: 100%; height: auto; margin: 0 auto; padding: 0;">
           <p>
             We also evaluated several baselines as a comparison to our proposed model: a state-of-the-art Diffusion policy <a href="https://arxiv.org/abs/2303.04137">[6]</a>,
-             a vanilla multi-layer perceptron (MLP), a classical centerline-following controller, and two clinicians trained in neurointerventional radiology. 
+             a multi-layer perceptron (MLP), a classical centerline-following controller, and two clinicians trained in neurointerventional radiology. 
              The Diffusion and MLP policies use the same inputs (live and goal images passed through Resnet encoders) and outputs (action chunk and contrast
               prediction) as our proposed model. We evaluated all these policies on the novel geometries test set.
           </p>
-          <img src="resources/imgs/tabsuccess.png" alt="Descriptive text about the image" style="display: block; max-width: 100%; height: auto; margin: 0 auto; padding: 0;">
-
+          <img src="resources/imgs/baseline_result.png" alt="Descriptive text about the image" style="display: block; max-width: 100%; height: auto; margin: 0 auto; padding: 0;">
         </div>
-
-        <div class="content has-text-justified">
-          <p>
-          To provide a more continuous measure of the performance of each model, we present the distance between the robot's tip and the goal aneurysm's 
-          boundary at the end of the trial -- indicating how close the model is to succeeding.
-          </p>
-          <img src="resources/imgs/finaldist.png" alt="Descriptive text about the image" style="display: block; max-width: 100%; height: auto; margin: 0 auto; padding: 0;">
-         </div>
       </div>
     </div>
   </div>
